@@ -5,21 +5,21 @@
 class Kubeui < Formula
   desc "Kubernetes monitoring and management UI"
   homepage "https://github.com/opengittr/kubeui"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.0/kubeui_darwin_amd64.tar.gz"
-      sha256 "321ae55d97b48e6562bcbf7902d7417551f3a3f26e408b073b70133c6de49ab3"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.1/kubeui_darwin_amd64.tar.gz"
+      sha256 "7fabd0a458b5caaecaacb05da28d97e09296d258846db75fa9669df7ee7fd734"
 
       def install
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.0/kubeui_darwin_arm64.tar.gz"
-      sha256 "3180744e58ad5484eccecac3568f91bdfd7d9cb2035d56efa9536a87dc97398e"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.1/kubeui_darwin_arm64.tar.gz"
+      sha256 "17066a6c4217d098c58c1a1e62b5264e241fbb9d159ff708de10a60b05f91917"
 
       def install
         bin.install "kubeui"
@@ -29,15 +29,15 @@ class Kubeui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.0/kubeui_linux_amd64.tar.gz"
-      sha256 "25982cd4af5736c056794bb41829a01c9ca81045dd72d7fcdc5ec4d326161ea6"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.1/kubeui_linux_amd64.tar.gz"
+      sha256 "bd4370b3e2c6c09aba3adcbffd2872e6a3888a6e3e5185fb46818ce72281b58c"
       def install
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.0/kubeui_linux_arm64.tar.gz"
-      sha256 "31af28f81b1bce33d1a1fb91e8cdbec17f5c28c46b5f761c3666c6f6d1aaca56"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.1/kubeui_linux_arm64.tar.gz"
+      sha256 "27f87e3aa7c383efe2d0482255a18e57cad95032d25c5092154320ffecbb4dea"
       def install
         bin.install "kubeui"
       end
