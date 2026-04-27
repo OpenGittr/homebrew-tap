@@ -5,23 +5,23 @@
 class Kubeui < Formula
   desc "Kubernetes monitoring and management UI"
   homepage "https://github.com/opengittr/kubeui"
-  version "0.1.4"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.4/kubeui_darwin_amd64.tar.gz"
-      sha256 "528708d7e6ca7fc94cbf2497c71247fc4ace347d2f82b5cdfa959c181d8ca32b"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.2.0/kubeui_darwin_amd64.tar.gz"
+      sha256 "76888715ed173abd06143927e03ab07e4673a184eadd17a1271f6ec0a6771b2b"
 
-      def install
+      define_method(:install) do
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.4/kubeui_darwin_arm64.tar.gz"
-      sha256 "1a0c1364f64b85c22fbb648439effe53a8e82e40911527b7e60201e59f2d8ca6"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.2.0/kubeui_darwin_arm64.tar.gz"
+      sha256 "8afe70f8f72f0dfbc26f93b7a4758d5efd4c5d5c463176181d28a226d34fdede"
 
-      def install
+      define_method(:install) do
         bin.install "kubeui"
       end
     end
@@ -29,16 +29,16 @@ class Kubeui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.4/kubeui_linux_amd64.tar.gz"
-      sha256 "cfdc0c4df786dd752cf795016d4f82875f5b1e6612fd0211b7da0aeb0625752d"
-      def install
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.2.0/kubeui_linux_amd64.tar.gz"
+      sha256 "e2e7149ad640e2922fd13475d660a5f8b9dc7c9f3d20aa9fb8f4212bc3de7aba"
+      define_method(:install) do
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.1.4/kubeui_linux_arm64.tar.gz"
-      sha256 "fd5b3e08df710560ac9842a72f6b7c8dd46f8e700cd04427e25b0b0b4527adaa"
-      def install
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.2.0/kubeui_linux_arm64.tar.gz"
+      sha256 "0cd9e21f773a94b2d71cc602cad285bcf83c95687142864194d8cfd6e720bf9c"
+      define_method(:install) do
         bin.install "kubeui"
       end
     end
