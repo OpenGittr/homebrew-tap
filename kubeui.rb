@@ -5,21 +5,21 @@
 class Kubeui < Formula
   desc "Kubernetes monitoring and management UI"
   homepage "https://github.com/opengittr/kubeui"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.3.0/kubeui_darwin_amd64.tar.gz"
-      sha256 "cd04d6c13fb6146aaa732a7dbf432388e689faa516bcc166856c2fee1c1887d1"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.4.0/kubeui_darwin_amd64.tar.gz"
+      sha256 "af0eb735d456b79a786c914ec7c215f162c885a0452ca5012ed16634b767f561"
 
       define_method(:install) do
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.3.0/kubeui_darwin_arm64.tar.gz"
-      sha256 "9e7c4308204c3717bfb2e75201d7d5fde3cb32f317e6a833437a8a0c06f67f93"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.4.0/kubeui_darwin_arm64.tar.gz"
+      sha256 "4b40a3143bcaa0fcc731cb426cd863f6bbb30a107196e55fb2a3090b67d0cb3e"
 
       define_method(:install) do
         bin.install "kubeui"
@@ -29,15 +29,15 @@ class Kubeui < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.3.0/kubeui_linux_amd64.tar.gz"
-      sha256 "df9a6d3828bb4f00be2db79e58df645e6c9f5471b0ddd6301ba87fe0f15d3ef4"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.4.0/kubeui_linux_amd64.tar.gz"
+      sha256 "b3cd5cc21e414b8632c4451a0dd540c7c01db06f87588c8a20b1a8d328728eda"
       define_method(:install) do
         bin.install "kubeui"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/OpenGittr/kubeui/releases/download/v0.3.0/kubeui_linux_arm64.tar.gz"
-      sha256 "e72cb68acf2fddce3c9f04a0621d16648ce248f96732381b55dca8783da80149"
+      url "https://github.com/OpenGittr/kubeui/releases/download/v0.4.0/kubeui_linux_arm64.tar.gz"
+      sha256 "cf0504c927d08c6e04af369f8cadbedabfd7349ea2760ea5a49ecb146b0345ff"
       define_method(:install) do
         bin.install "kubeui"
       end
